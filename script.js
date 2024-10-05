@@ -429,21 +429,28 @@
 
 // 8- Accept the parameters and calculate the Compound Interest & print it on STDOUT (Use Math class methods)
 // let p = 1000;
-// let r = 10;
-// let t = 1;
+// let r = 0.05;
+// let t = 3;
 // let n = 4;
-// let amount = p * Math.pow((1 + r / 100), (n * t));
-// let CI = amount - p;
-// console.log(`Compound Interest is ${CI}`);
+// let A = p * Math.pow((1 + r / n), (n * t));
+// console.log(`Compound Interest is ${A.toFixed(2)}`);
 
 // 9- Accept the three sides of triangle and calculate the area using herons formula
-// let firstSide = 10;
-// let secondSide = 10;
-// let thirdSide = 10;
-// let s = (firstSide * secondSide * thirdSide) / 2;
+// let firstSide = 5;
+// let secondSide = 6;
+// let thirdSide = 7;
+// let s = (firstSide + secondSide + thirdSide) / 2;
 // let AreaOfTriangle = Math.sqrt(s * (s - firstSide) * (s - secondSide) * (s - thirdSide));
-// console.log(`Area of triangle is ${AreaOfTriangle}`);
+// console.log(`Area of triangle is ${AreaOfTriangle.toFixed(2)}`);
 
 // 10- Find surface area of sphere
+// let radius = 5;
+// let surfaceArea = 4 * Math.PI * Math.pow(radius , 2);
+// console.log(`Surface Area of sphere is ${surfaceArea.toFixed(2)}`);
 
 // 11- Find circumference and area of circle
+// let radius = 4;
+// let circumference = 2 * Math.PI * radius
+// let areaOfCircle = Math.PI * Math.pow(radius, 2);
+// console.log(`Surface Area of sphere is ${circumference.toFixed(2)} and area is ${areaOfCircle.toFixed(2)}`);
+

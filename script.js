@@ -454,3 +454,283 @@
 // let areaOfCircle = Math.PI * Math.pow(radius, 2);
 // console.log(`Surface Area of sphere is ${circumference.toFixed(2)} and area is ${areaOfCircle.toFixed(2)}`);
 
+// 12- Accept two numbers and print the greatest between them
+// let firstNumber = 5;
+// let secondNumber = 4;
+// if (firstNumber > secondNumber) {
+//     console.log(`${firstNumber} is greatest number`);
+// } else {
+//     console.log(`${secondNumber} is greatest number`);
+// }
+
+// 13- Accept the gender from the user as char and print the respective greeting message
+//    Ex - Good Morning Sir (on the basis of gender)
+// let gender = prompt('Enter first letter of your gender');
+// if(gender == "f" || gender == "F"){
+//     alert(`Good Morning Mam!`);
+// }else if (gender == "m" || gender == "M"){
+//     alert(`Good Morning Sir!`); 
+// }
+
+// 14- Extend the previous program and handle the wrong inputs.
+// let gender = prompt('Enter your gender');
+// if (gender == "f" || gender == "F" ) {
+//     alert(`Good Morning Mam!`);
+// } else if (gender == "m" || gender == "M" ) {
+//     alert(`Good Morning Sir!`);
+// } else {
+//     alert(`Please enter a valid gender`);
+// }
+
+// 15- Accept an integer and check whether it is an even number or odd.
+// let num = +prompt("Enter a number");
+// num % 2 == 0 ? alert(`${num} is even number`) : alert(`${num} is odd number`);
+
+// 16- Accept name and age from the user. Check if the user is a valid voter or not.
+//  Vaid - Hello Shery, You are a valid voter.
+//  Invalid - Sorry Shery, you can't cast the vote.
+// let userName = prompt("Enter your name");
+// let age = +prompt("Enter your age");
+// age > 18 ? alert(`Hello ${userName}, You are a valid voter.`) : alert(`Sorry ${userName}, You can't the vote.`);
+
+//  Part 2 - Print after how many years the user will be eligible
+// let userName = prompt("Enter your name");
+// let age = +prompt("Enter your age");
+// age > 18 ? alert(`Hello ${userName}, You are a valid voter.`) : alert(`Sorry ${userName}, You can't the vote till ${18-age} years`);
+
+// 17- Accept a day number between 1-7 and print the corresponding dayname.
+// let dayNumber = +prompt("Enter Any Number between 1 to 7");
+//  switch (dayNumber) {
+//     case 1: 
+//         alert('Monday');
+//         break;
+//     case 2:
+//         alert('Tuesday');
+//         break;
+//     case 3:
+//         alert('Wednesday');
+//         break;
+//     case 4:
+//         alert('Thursday');
+//         break;
+//     case 5:
+//         alert('Friday');
+//         break;
+//     case 6:
+//         alert('Saturday');
+//         break;
+//     case 7:
+//         alert('Sunday');
+//         break;
+//     default:
+//         alert('Please Enter a valid Number');
+//         break;
+// }
+
+// 18- Accept three numbers and print the greatest among them
+// let firstNumber = +prompt("Enter first number");
+// let secondNumber = +prompt("Enter second number");
+// let thirdNumber = +prompt("Enter third number");
+// if (firstNumber > secondNumber && firstNumber > thirdNumber) {
+//     alert(`${firstNumber} is greatest number`);
+// } else if( secondNumber > firstNumber && secondNumber > thirdNumber){
+//     alert(`${secondNumber} is greatest number`);
+// }else{
+//     alert(`${thirdNumber} is greatest number`);
+// }
+
+// 19- Accept a year and check if it a leap year or not (google to find out what's a leap year)
+// let year = +prompt("Enter Year");
+// let year = +prompt("Enter Year");
+// if ((year % 400 === 0) || (year % 100 !== 0 && year % 4 === 0)) {
+//     alert(`${year} is leap year`);
+// } else {
+//     alert(`${year} is not leap year`);
+// }
+
+
+
+
+
+
+
+
+// 20- Shop discount - Description on Graphic
+
+
+// 21- Bijli Bill - Description on Graphic
+
+
+
+
+
+
+
+
+
+// 22- Accept an english alphabet from user and check if it is a consonent or a vowel;
+// let charInput = prompt('Enter a character');
+// switch (charInput) {
+//     case 'a':
+//         alert(`${charInput} is a vowel letter`);
+//         break;
+//     case 'e':
+//         alert(`${charInput} is a vowel letter`);
+//         break;
+//     case 'i':
+//         alert(`${charInput} is a vowel letter`);
+//         break;
+//     case 'o':
+//         alert(`${charInput} is a vowel letter`);
+//         break;
+//     case 'u':
+//         alert(`${charInput} is a vowel letter`);
+//         break;
+
+//     default:
+//         alert(`${charInput} is a consonent letter`);
+//         break;
+// }
+
+
+// 23- Accept an integer and Print hello world n times
+// let num = 10;
+// for (let i = 1; i <= num; i++) {
+//     console.log(i);
+// }
+
+// 24- Print natural number up to n.
+// let num = 10;
+// for (let i = num; i <= 20; i++) {
+//     console.log(i);
+// }
+
+// 25- Reverse for loop. Print n to 1.
+// let num = 5;
+// while (num >= 1) {
+//     console.log(num);
+//     num--;
+// }
+
+
+// 26- Take a number as input and print its table
+//   5 * 1 = 5
+//   5 * 2 = 10 ... up to 10 terms
+// let num = 5;
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`${num} * ${i} = ${num * i}`);
+// }
+
+
+// 27- Sum up to n terms.
+// let num = 5;
+// let sum = (num * (num + 1)) / 2;
+// console.log(`Sum up to n terms is ${sum}`);
+
+
+// 28- Factorial of a number
+// let num = 5;
+// let fact = 1;
+// for (let i = num; i > 0; i--) {
+//     fact = fact * i;    
+// }
+// console.log(`Factorial of ${num} is ${fact}`);
+
+
+// 29- Print the sum of all even & odd numbers in a range seperately.
+// let start = 1;
+// let end = 10;
+// let sum = 0;
+// for (let i = start; i <= end; i++) {
+//     if( i % 2 == 0){
+//         sum += i;
+//     }
+// }
+// console.log(`sum of all even & odd numbers from ${start} to ${end} is ${sum}`);
+
+
+// 30- Print all the factors of a number.
+// let num = 9; 
+// for (let i = 1; i < num; i++) {
+//     if (num % i == 0) {
+//         console.log(i);
+//     }
+// }
+
+
+// 31- Print the sum of all factors of a number, 50 -> 1 + 2 + 5 + 10 + 25 = 43
+// let num = 10;
+// let sumOfFactor = 0;
+// for(let i = 1; i < num; i++){
+//     if(num % i == 0){
+//         sumOfFactor = sumOfFactor + i;
+//     }
+// }
+// console.log(`Sum of all factors of ${num} is ${sumOfFactor}`);
+
+
+// 32- Check if the number is Prime or not.
+// let num = 101;
+// let isPrime = true;
+// for (let i = 2; i < num; i++) {
+//     if (num % i === 0) {
+//         isPrime = false;
+//         break; // No need to check further if a divisor is found
+//     }
+// }
+// if (isPrime && num > 1) {
+//     console.log('prime');
+// } else {
+//     console.log('not prime');
+// }
+
+
+// 33- Write a program to take two inputs a, b & find the value of a raised to the power of b. 
+// Ex - a = 2, b = 5
+// OP - 2^5 = 32
+// let base = 2;
+// let power = 3;
+// let res = Math.pow(base, power);
+// console.log(`${base} ^ ${power} = ${res}`);
+
+
+// 34- Seprate each digit of a number and print it on the new line ex - 123
+// OP
+// 3
+// 2
+// 1
+// let num = 135;
+// let digit = num.toString().split('').reverse();
+// digit.forEach((element)=>{
+//   console.log(element)
+// });newDigit = Number(element);
+
+
+// 35- Sum of digits of a number, 936 = 18
+// let num = 123;
+// let digit = num.toString().split('');
+// let sumOfDigit = 0;
+// digit.forEach((element) => {
+//   newDigit = Number(element);
+//   sumOfDigit = sumOfDigit + newDigit;
+// });
+// console.log(`Sum of all digits is ${sumOfDigit}`);
+
+
+// 36- Accept a number and print its reverse
+// let num = 1035;
+// let reverseNum = num.toString().split('').reverse().join('');
+// console.log(`Reverce Number of ${num} is ${reverseNum}`);
+
+// 37- Accept a number and check if it is a pallindromic number (If number and its reverse are equal)
+//   Ex - 12321 - Rerverse - 12321
+// let num = 121;
+// let reverseNum = num.toString().split('').reverse().join('');
+// let res = num == reverseNum ? `${num} is a pallindrome` : `${num} is not a pallindrome`;
+// console.log(res);
+
+
+// 38- Accept a number and check if it is a strong number or not (Sum of factorial of each digit)
+//   Ex- 145 = 1! + 4! + 5! = 145
+// 39- Automorphic number 5 = 25 = 625 = 390625, 6=36, 76 = 5776
+

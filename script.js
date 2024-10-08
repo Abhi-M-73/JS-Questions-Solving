@@ -722,6 +722,7 @@
 // let reverseNum = num.toString().split('').reverse().join('');
 // console.log(`Reverce Number of ${num} is ${reverseNum}`);
 
+
 // 37- Accept a number and check if it is a pallindromic number (If number and its reverse are equal)
 //   Ex - 12321 - Rerverse - 12321
 // let num = 121;
@@ -732,5 +733,143 @@
 
 // 38- Accept a number and check if it is a strong number or not (Sum of factorial of each digit)
 //   Ex- 145 = 1! + 4! + 5! = 145
-// 39- Automorphic number 5 = 25 = 625 = 390625, 6=36, 76 = 5776
+// let num = 145;
+// let digits = num.toString().split('');
+// let sumOfFactDigits = 0;
+// digits.forEach((element) => {
+//     let fact = 1;
+//     let newElement = Number(element);
+//     for(let i = newElement; i > 0; i--){
+//         fact = fact * i;
+//     } 
+//     // console.log(fact);
+//     sumOfFactDigits = sumOfFactDigits + fact;
+// });
+// console.log(`Sum of factorial of ${digits} is ${sumOfFactDigits}`);
 
+
+// 39- Automorphic number 5 = 25 = 625 = 390625, 6=36, 76 = 5776
+// let num = 6;
+// let digits = num.toString().split('');
+// let squareOfNum = (Math.pow(num, 2)).toString().split('');
+// if (digits.at(-1) == squareOfNum.at(-1)) {
+//     console.log(`${num} is Automorphic Number`);
+// } else {
+//     console.log(`${num} is not Automorphic Number`);
+// }
+
+
+
+// 40- Print hello until user gives wrong input using do while
+// let inp = 11;
+// do {
+//     console.log("hello");
+// } while (inp != 10 );
+
+
+// 41- Make a choice based calculator using do while
+
+
+
+
+
+
+
+
+// 42- Print Weekday using Switch
+// let dayNumber = +prompt("Enter Any Number between 1 to 7");
+//  switch (dayNumber) {
+//     case 1: 
+//         alert('Monday');
+//         break;
+//     case 2:
+//         alert('Tuesday');
+//         break;
+//     case 3:
+//         alert('Wednesday');
+//         break;
+//     case 4:
+//         alert('Thursday');
+//         break;
+//     case 5:
+//         alert('Friday');
+//         break;
+//     case 6:
+//         alert('Saturday');
+//         break;
+//     case 7:
+//         alert('Sunday');
+//         break;
+//     default:
+//         alert('Please Enter a valid Number');
+//         break;
+// }
+
+
+// 43- Question 22 using Switch
+// This is solved already
+
+// 44- Project - Guess Game
+//  Write a program that generates a random number and asks the user to guess what the number is.
+//  If the user's guess is higher than the random number, the program should display "Too high, try again."
+//  If the user's guess is lower than the random number, the program should display "Too low, try again."
+//  The program should use a loop that repeats until the user correctly guesses the random number.
+
+
+
+
+
+
+
+
+
+// 54- Accept size n from user and create a n size array then take n inputs into the and finally Print the sum & Avg of all elements.
+// let arrLength = 5;
+// let arr = [];
+// sum = 0;
+// for (let i = 1; i <= arrLength; i++) {
+//     arr.push(i);
+//     sum += i;
+// }
+// let avg = sum / arrLength;
+// console.log("Array = ", arr);
+// console.log("Sum = ", sum);
+// console.log("Average = ", avg);
+
+
+// 55- Find the greatest element. [2, 96, 69, 77, 145, 20] = Max element = 145 found at 4 index
+// let arr = [2, 96, 69, 77, 145, 20];
+// let maxElement = Math.max(...arr);
+// console.log(`Max number is ${maxElement}`);
+
+
+// 56- Find the second greatest element [2, 96, 69, 77, 145, 20] = Second greatest element = 96
+// let arr = [2, 96, 69, 77, 145, 20];
+// let maxElement = Math.max(...arr, );
+// let filterarr = arr.filter(element => element != maxElement);
+// let secondMaxElement = Math.max(...filterarr);
+// console.log(`Second Max number is ${secondMaxElement}`);
+
+
+// 57- Check if array is sorted in increasing order or not.
+//    Ex 1 - [ 1, 5, 8, 9, 10, 15 ] - OP = "YES"
+//    Ex 2 - [ 1, 8, 6, 9, 10, 15 ] - OP = "NO"
+// let arr = [1, 5, 8, 9, 10, 15];
+// let incSortedArr = [...arr].sort((a, b) => a - b);
+// if ( arr == incSortedArr) {
+//     console.log('YES') ;
+// } else {
+//     console.log('NO') ;
+// }
+
+
+
+// 58- Take n integer inputs from user and store them in an array.
+//     Now, copy all the elements in an another array but in reverse order and print it.
+
+
+
+// 59- Array left Rotation by 1
+// 60- Array left rotation by K elements
+// 61- Array Reverse Without Using Extra space
+// 62- Linear Search an array - If element found print the index else -1

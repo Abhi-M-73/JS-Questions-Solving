@@ -277,7 +277,7 @@
 // if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
 //    console.log("Vowel");
 // } else {
-//    console.log("Invalid input");
+//    console.log("Consonent");
 // }
 
 
@@ -406,7 +406,7 @@
 //         break; // No need to check further if a divisor is found
 //     }
 // }
-// if (isPrime && num > 1) {
+// if (isPrime && num > 1) { 
 //     console.log('prime');
 // } else {
 //     console.log('not prime');
@@ -435,11 +435,21 @@
 // 3
 // 2
 // 1
+
+//method 1
 // let num = 135;
 // let digit = num.toString().split('').reverse();
 // digit.forEach((element)=>{
 //   console.log(element)
 // });newDigit = Number(element);
+
+//method 2
+// let num = 135;
+// while (num > 0) {
+//     let digit = num % 10;  // Get the last digit
+//     num = Math.floor(num / 10);  // Remove the last digit from the number
+//     console.log(digit);  // Print the digit
+// }
 
 
 
@@ -461,7 +471,7 @@
 
 
 // 36- Accept a number and print its reverse
-// let number = 936; 
+// let number = 936;
 // let reversedNumber = 0;
 // while (number > 0) {
 //     let lastDigit = number % 10;                         // Get the last digit
@@ -476,10 +486,28 @@
 
 // 37- Accept a number and check if it is a pallindromic number (If number and its reverse are equal)
 //   Ex - 12321 - Rerverse - 12321
+
+// method 1
 // let num = 121;
 // let reverseNum = num.toString().split('').reverse().join('');
 // let res = num == reverseNum ? `${num} is a pallindrome` : `${num} is not a pallindrome`;
 // console.log(res);
+
+//method 2
+// let num = 121;
+// let temp = num;
+// let reverseNum = 0;
+// while(num > 0){
+//     let lastDigit = num % 10;
+//     reverseNum = reverseNum * 10 + lastDigit; 
+//     num = Math.floor(num / 10);
+// }
+// num = temp;
+// if (num == reverseNum) {
+//     console.log('Palindrome')
+// } else {
+//     console.log('Not Palindrome');
+// }
 
 
 
@@ -489,6 +517,8 @@
 
 // 38- Accept a number and check if it is a strong number or not (Sum of factorial of each digit)
 //   Ex- 145 = 1! + 4! + 5! = 145
+
+// method 1
 // let num = 235;
 // let digits = num.toString().split('');
 // let sumOfFactDigits = 0;
@@ -504,11 +534,29 @@
 // console.log(`Sum of factorial of ${digits} is ${sumOfFactDigits}`);
 
 
+//method 2
+// let num = 145;
+// let sumOfFactDigits = 0;
+// while (num > 0) {
+//     let lastDigit = num % 10;
+//     num = Math.floor(num / 10);
+//     let fact = 1;
+//     for (i = lastDigit; i > 0; i--) {
+//         fact = fact * i;
+//     }
+//     // console.log(fact);
+//     sumOfFactDigits = sumOfFactDigits + fact;
+// }
+// console.log(`Sum of factorial of all digits is ${sumOfFactDigits}`);
+
+
 
 // *******************************************************************************************************************
 
 
 // 39- Automorphic number 5 = 25 = 625 = 390625, 6=36, 76 = 5776
+
+// method 1
 // let num = 6;
 // let digits = num.toString().split('');
 // let squareOfNum = (Math.pow(num, 2)).toString().split('');
@@ -517,6 +565,20 @@
 // } else {
 //     console.log(`${num} is not Automorphic Number`);
 // }
+
+//method 2
+// let num = 625;
+// let temp = num;
+// let square = num * num;
+
+// let count = 0;
+// while(num > 0){
+//     count++;
+//     num = Math.floor(num / 10);
+// }
+// let res = square % Math.pow(10, count);
+// num = temp;
+// num == res ? console.log("Automorphic Number") : console.log("Not automorphic Number");
 
 
 // *******************************************************************************************************************
@@ -533,17 +595,26 @@
 
 
 // 41- Make a choice based calculator using do while
-console.log("for sum type 1 \nfor sub type 2 \nfor exit type 0  ")
-let op = +prompt("Enter number to perform operation");
-let num1 = +prompt("Enter first number");
-let num2 = +prompt("Enter second number");
-do {
-    if (op == 1) {
-        console.log(`Sum of ${num1} and ${num2} is ${num1 + num2}`);
-    } else if (op == 2) {
-        console.log(`Sum of ${num1} and ${num2} is ${num1 - num2}`);
-    }
-} while (op !== 0);
+// let op;
+// do {
+//      op = prompt("Enter operation to perform ( + , - , * , / , 0 to exit)");
+//     if (op === '0') break;
+
+//     let num1 = +prompt("Enter first number");
+//     let num2 = +prompt("Enter second number");
+
+//     if (op === '+') {
+//         console.log(`Sum of ${num1} and ${num2} is ${num1 + num2}`);
+//     } else if (op === '-') {
+//         console.log(`Subtraction of ${num1} and ${num2} is ${num1 - num2}`);
+//     } else if (op === '*') {
+//         console.log(`Multiplication of ${num1} and ${num2} is ${num1 * num2}`);
+//     } else if (op === '/') {
+//         console.log(`Division of ${num1} and ${num2} is ${num1 / num2}`);
+//     } else {
+//         console.log("Invalid operation. Please try again.");
+//     }
+// } while (op !== '0');
 
 
 
@@ -585,7 +656,28 @@ do {
 
 
 // 43- Question 22 using Switch
-// This is solved already
+// 22- Accept an english alphabet from user and check if it is a consonent or a vowel;
+// let char = prompt("Enter an English alphabet:");
+// switch (char) {
+//     case 'a':
+//         console.log("Vowel");
+//         break;
+//     case 'e':
+//         console.log("Vowel");
+//         break;
+//     case 'i':
+//         console.log("Vowel");
+//         break;
+//     case 'o':
+//         console.log("Vowel");
+//         break;
+//     case 'u':
+//         console.log("Vowel");
+//         break;
+//     default:
+//         console.log("Consonent");
+//         break;
+// }
 
 
 
@@ -598,10 +690,225 @@ do {
 //  If the user's guess is lower than the random number, the program should display "Too low, try again."
 //  The program should use a loop that repeats until the user correctly guesses the random number.
 
+// let input;
+// do {
+//     let input = +prompt("Guess a number between 1 to 10");
+//     let randomNumber = Math.floor(Math.random() * 10) + 1; 
+//     console.log(randomNumber);
+//     if (input === randomNumber) {
+//         console.log("Welcome, you guessed the right number!");
+//         break;
+//     } else if (input > randomNumber) {
+//         console.log("Too high, try again");
+//     } else {
+//         console.log("Too low, try again");
+//     }
+// } while (true);
 
 
 
+// *******************************************************************************************************************
 
+
+// 45- Project Restuarent v 1.0
+
+// let choice;
+// do {
+//     console.log("For Indian Food type 1 \nFor Italian Food type 2 \nFor Russian Food type 3 \nFor Chinese Food type 4");
+//     choice = prompt("Enter a choice number");
+
+//     switch (choice) {
+//         case '1':
+//             console.log("For Paratha type 1 \nFor Samosa type 2 \nFor Biryani type 3");
+//             choice = prompt("Enter a choice number");
+//             switch (choice) {
+//                 case '1':
+//                     console.log("Paratha");
+//                     break;
+//                 case '2':
+//                     console.log("Samosa");
+//                     break;
+//                 case '3':
+//                     console.log("Biryani");
+//                     break;
+//             }
+//             break;
+//         case '2':
+//             console.log("For Pizza type 1 \nFor Pasta type 2 \nFor Lasagna type 3");
+//             choice = prompt("Enter a choice number");
+//             switch (choice) {
+//                 case '1':
+//                     console.log("Pizza");
+//                     break;
+//                 case '2':
+//                     console.log("Pasta");
+//                     break;
+//                 case '3':
+//                     console.log("Lasagna");
+//                     break;
+//             }
+//             break;
+//         case '3':
+//             console.log("For Medovik type 1 \nFor Solyanka type 2 \nFor Pelmeni type 3");
+//             choice = prompt("Enter a choice number");
+//             switch (choice) {
+//                 case '1':
+//                     console.log("Medovik");
+//                     break;
+//                 case '2':
+//                     console.log("Solyanka");
+//                     break;
+//                 case '3':
+//                     console.log("Pelmeni");
+//                     break;
+//             }
+//             break;
+//         case '4':
+//             console.log("For Wonton Soup type 1 \nFor Dim Sum type 2 \nFor Hot Pot type 3");
+//             choice = prompt("Enter a choice number");
+//             switch (choice) {
+//                 case '1':
+//                     console.log("Wonton Soup");
+//                     break;
+//                 case '2':
+//                     console.log("Dim Sum");
+//                     break;
+//                 case '3':
+//                     console.log("Hot Pot");
+//                     break;
+//             }
+//             break;
+//     }
+// } while (choice !== '0');
+
+
+
+// *******************************************************************************************************************
+
+
+
+// 46- Right Triangle - Star
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+
+// let rowNum = 5;
+// for (let i = 1; i <= rowNum; i++) {
+//     let row = '';
+//     for (let j = 1; j <= i; j++) {
+//         row += '*';        
+//     }
+//     console.log(row);
+// }
+
+
+
+// *******************************************************************************************************************
+
+
+// 47- Right Triangle - Number
+// 1
+// 1 2
+// 1 2 3 
+// 1 2 3 4
+// 1 2 3 4 5
+
+// let rowNum = 5;
+// for (let i = 1; i <= rowNum; i++) {
+//     let row = '';
+//     for (let j = 1; j <= i; j++) {
+//         row += j;
+//     }
+//     console.log(row)
+// }
+
+
+
+// *******************************************************************************************************************
+
+
+// 48- Right Triangle - Alphabet
+// A
+// A B
+// A B C
+// A B C D
+// A B C D E
+
+// let rowNum = 5;
+// let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+// for(let i = 0; i <= rowNum; i++){
+//     let row = '';
+//     for(let j = 0; j <= i; j++){
+//         row += char[j];
+//     }
+//     console.log(row);
+// }
+
+
+
+// *******************************************************************************************************************
+
+
+// 49- Inverted Right Triangle
+// * * * * *
+// * * * *
+// * * *
+// * *
+// *
+
+// let rowNum = 5;
+// for(let i =rowNum; i >= 1; i--){
+//     let row = '';
+//     for(let j = 1; j <= i; j++){
+//         row += '* ';
+//     }
+//     console.log(row);
+// }
+
+// *******************************************************************************************************************
+
+
+
+// 50- Mirrored Right Triangle
+//                 *
+//             * *
+//         * * *
+//     * * * *
+// * * * * *
+
+
+// *******************************************************************************************************************
+
+
+// 51- Triangle
+//         *
+//       * *
+//     * * *
+//   * * * *
+// * * * * *
+
+
+// *******************************************************************************************************************
+
+// 52- V - Min Height = 3
+// *               *
+//   *           *
+//     *       *
+//       *   *
+//         *
+
+
+// *******************************************************************************************************************
+
+
+// 53- X
+// *              *
+//     *      *
+//         *
+//     *      *
+// *              *
 
 
 // *******************************************************************************************************************

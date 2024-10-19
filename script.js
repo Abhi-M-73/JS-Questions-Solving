@@ -949,42 +949,69 @@
 //   }
 
 
+
+
 // *********************************************** ARRAY Day 22 to 29 ************************************************
 
 
 // 54- Accept size n from user and create a n size array then take n inputs into the and finally Print the sum & Avg of all elements.
 
 // let arr = [];
-// let arrLength = 5;
+// let arrLength = +prompt("Enter length of array");
 // let sum = 0;
 // for(let i = 1; i <= arrLength; i++){
-//     arr.push(i);
+//     let input = +prompt("Enter a number");
+//     arr.push(input);
 //     sum += i;
 // }
 // console.log(arr);
-// console.log(sum);
+// console.log("Sum = ", sum);
 // let avg = sum / arrLength;
-// console.log(avg);
+// console.log("Average = " ,avg);
 
 
 // *******************************************************************************************************************
 
 
 // 55- Find the greatest element. [2, 96, 69, 77, 145, 20] = Max element = 145 found at 4 index
+
+// method 1
 // let arr = [2, 96, 69, 77, 145, 20];
 // let maxElement = Math.max(...arr);
 // console.log(`Max number is ${maxElement}`);
+
+//method 2 
+// let arr = [2, 96, 69, 77, 145, 20];
+// let maxElement = arr[0];
+// let index = 0;
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > maxElement) {
+//         maxElement = arr[i];
+//         index = i;
+//     }
+// }
+// console.log(`Max Element = ${maxElement} found at ${index} index.`);
+
 
 
 // *******************************************************************************************************************
 
 
 // 56- Find the second greatest element [2, 96, 69, 77, 145, 20] = Second greatest element = 96
+
 // let arr = [2, 96, 69, 77, 145, 20];
-// let maxElement = Math.max(...arr, );
-// let filterarr = arr.filter(element => element != maxElement);
-// let secondMaxElement = Math.max(...filterarr);
-// console.log(`Second Max number is ${secondMaxElement}`);
+// let maxElement = arr[0];
+// let secondMaxElement = arr[0];
+// for (let i = 0; i < arr.length; i++) {
+//    if (arr[i] > maxElement) {
+//        secondMaxElement = maxElement;
+//        maxElement = arr[i];
+//    } else if (arr[i] > secondMaxElement && arr[i] != maxElement){
+//         secondMaxElement = arr[i];
+//    }
+// }
+// console.log(secondMaxElement);
+
 
 
 // *******************************************************************************************************************
@@ -992,13 +1019,16 @@
 // 57- Check if array is sorted in increasing order or not.
 //    Ex 1 - [ 1, 5, 8, 9, 10, 15 ] - OP = "YES"
 //    Ex 2 - [ 1, 8, 6, 9, 10, 15 ] - OP = "NO"
-// let arr = [1, 5, 8, 9, 10, 15];
-// let incSortedArr = [...arr].sort((a, b) => a - b);
-// if ( arr == incSortedArr) {
-//     console.log('YES') ;
-// } else {
-//     console.log('NO') ;
+
+// let arr = [ 1, 8, 6, 9, 10, 15 ];
+// let isSorted = "Yes";
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] < arr[i-1]) {
+//         isSorted = "No";
+//         break;
+//     }
 // }
+// console.log(isSorted);
 
 
 
@@ -1008,8 +1038,24 @@
 // 58- Take n integer inputs from user and store them in an array.
 //     Now, copy all the elements in an another array but in reverse order and print it.
 
+// let arr = [];
+// let arrLength = +prompt("Enter length of array");
+// for (let i = 0; i < arrLength; i++) {
+//   let input = +prompt("Enter the number");
+//   arr.push(input);
+// }
+// console.log("Original Array = ", arr);
 
-
+// let start = 0;
+// let end = arr.length - 1;
+// while (start < end) {
+//   let temp = arr[start];
+//   arr[start] = arr[end];
+//   arr[end] = temp;
+//   start++;
+//   end--;
+// }
+// console.log("Reverse Array = ", arr);
 
 
 
@@ -1017,11 +1063,128 @@
 
 
 // 59- Array left Rotation by 1
+
+// let arr = [1, 2, 3, 4, 5];
+
+// if (arr.length !== 0) {
+//   let firstElement = arr[0];
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+//   arr[arr.length - 1] = firstElement;
+// }
+// console.log(arr); // Outputs: [2, 3, 4, 5, 1]
+
+
+
+
+// *******************************************************************************************************************
+
+
 // 60- Array left rotation by K elements
+
+// let arr = [1, 2, 3, 4, 5];
+// let k = 2;
+// let n = arr.length;
+// k = k % n; 
+// // Left rotate by k elements
+// let result = [];
+// for (let i = 0; i < n; i++) {
+//   result[i] = arr[(i + k) % n];
+// }
+
+// console.log(result); // Outputs: [3, 4, 5, 1, 2]
+
+
+
+// *******************************************************************************************************************
+
+
 // 61- Array Reverse Without Using Extra space
+
+// let arr = [1, 2, 3, 4, 5];
+// let start = 0;
+// let end = arr.length - 1;
+
+// while (start < end) {
+//     let temp = arr[start];
+//     arr[start] = arr[end];
+//     arr[end] = temp;
+//     start++;
+//     end--;
+// }
+// console.log(`Reverse Array = ${arr}`);
+
+
+
+// *******************************************************************************************************************
+
+
 // 62- Linear Search an array - If element found print the index else -1
 
+// let arr = [5, 8, 1, 4, 2];
+// let target = 2;
+// let index = 0;
 
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] == target) {
+//         index = i;
+//     }
+// }
+// console.log("index = ", index);
+
+
+
+
+// *******************************************************************************************************************
+
+
+// 63- Binary Search. If element found print the index else -1
+
+// let arr = [5, 8, 1, 4, 2];
+// let target = 4;
+
+// function findBinarySearch(arr, target) {
+//     let left = 0;
+//     let right = arr.length - 1;
+
+//     while (left <= right) {
+//         let mid = Math.floor((left + right) / 2);
+//         if(arr[mid] === target){
+//             return mid;
+//         }else if(arr[mid] < target){
+//             left = mid + 1;
+//         }else if(arr[mid] > target){
+//             right = mid - 1;
+//         }
+//     }
+//     return -1;
+// }
+
+// let result= findBinarySearch(arr, target);
+// console.log(result);
+
+
+
+
+// *******************************************************************************************************************
+
+
+// 64- Bubble Sort.
+
+
+
+// *******************************************************************************************************************
+
+// 65- Move all the negative elements on left side and positive elements on
+// right side O(n).
+// 66- Print the count of subarrays whose sum is equal to the target.
+// Ex - {1,2,3,7,5}, T = 12    O/P - 2 - [ {2,3,7}, {7,5} ] - Both the subarrays
+// has sum 12
+// 67- Strong number using methods
+// 68- Special number using methods.
+// 69- Leetcode 1929 - Concatenation of array
+// 70- Leetcode 1920 - Build Array from Permutation
 
 
 

@@ -72,7 +72,7 @@
 // console.log(`before swapping a is ${a} and b is ${b}`);
 // a = a - b;     //a = 10
 // b = a + b;     //b = 20
-// a = b - a;     //a = 10 
+// a = b - a;     //a = 10
 // console.log(`After swapping a is ${a} and b is ${b}`);
 
 
@@ -152,7 +152,7 @@
 // if(gender == "f" || gender == "F"){
 //     alert(`Good Morning Mam!`);
 // }else if (gender == "m" || gender == "M"){
-//     alert(`Good Morning Sir!`); 
+//     alert(`Good Morning Sir!`);
 // }
 
 
@@ -240,7 +240,7 @@
 //*******************************************************************************************************************
 
 
-// 19- Accept a year and check if it a leap year or not (google to find out what's a leap year) 
+// 19- Accept a year and check if it a leap year or not (google to find out what's a leap year)
 // let year = +prompt("Enter Year");
 // if ((year % 400 === 0) || (year % 100 !== 0 && year % 4 === 0)) {
 //     alert(`${year} is leap year`);
@@ -254,8 +254,8 @@
 
 
 // 20- Shop discount - Description on Graphic
-// let originalPrice = +prompt("Price of Product"); 
-// let discountPercentage = +prompt("Discount percent of Product"); 
+// let originalPrice = +prompt("Price of Product");
+// let discountPercentage = +prompt("Discount percent of Product");
 // let discountAmount = (originalPrice * discountPercentage) / 100;
 // let finalPrice = originalPrice - discountAmount;
 // console.log("The final price after discount is: Rs. ", finalPrice);
@@ -266,7 +266,7 @@
 
 
 // 21- Bijli Bill - Description on Graphic
-// let unitsConsumed = +prompt("Consume Units"); 
+// let unitsConsumed = +prompt("Consume Units");
 // let ratePerUnit = 5;
 // let totalBill = unitsConsumed * ratePerUnit;
 // console.log("The total electricity bill is: Rs. ", totalBill);
@@ -410,7 +410,7 @@
 //         break; // No need to check further if a divisor is found
 //     }
 // }
-// if (isPrime && num > 1) { 
+// if (isPrime && num > 1) {
 //     console.log('prime');
 // } else {
 //     console.log('not prime');
@@ -503,7 +503,7 @@
 // let reverseNum = 0;
 // while(num > 0){
 //     let lastDigit = num % 10;
-//     reverseNum = reverseNum * 10 + lastDigit; 
+//     reverseNum = reverseNum * 10 + lastDigit;
 //     num = Math.floor(num / 10);
 // }
 // num = temp;
@@ -697,7 +697,7 @@
 // let input;
 // do {
 //     let input = +prompt("Guess a number between 1 to 10");
-//     let randomNumber = Math.floor(Math.random() * 10) + 1; 
+//     let randomNumber = Math.floor(Math.random() * 10) + 1;
 //     console.log(randomNumber);
 //     if (input === randomNumber) {
 //         console.log("Welcome, you guessed the right number!");
@@ -802,7 +802,7 @@
 // for (let i = 1; i <= rowNum; i++) {
 //     let row = '';
 //     for (let j = 1; j <= i; j++) {
-//         row += '*';        
+//         row += '*';
 //     }
 //     console.log(row);
 // }
@@ -815,7 +815,7 @@
 // 47- Right Triangle - Number
 // 1
 // 1 2
-// 1 2 3 
+// 1 2 3
 // 1 2 3 4
 // 1 2 3 4 5
 
@@ -980,7 +980,7 @@
 // let maxElement = Math.max(...arr);
 // console.log(`Max number is ${maxElement}`);
 
-//method 2 
+//method 2
 // let arr = [2, 96, 69, 77, 145, 20];
 // let maxElement = arr[0];
 // let index = 0;
@@ -1086,7 +1086,7 @@
 // let arr = [1, 2, 3, 4, 5];
 // let k = 2;
 // let n = arr.length;
-// k = k % n; 
+// k = k % n;
 // // Left rotate by k elements
 // let result = [];
 // for (let i = 0; i < n; i++) {
@@ -1123,15 +1123,17 @@
 // 62- Linear Search an array - If element found print the index else -1
 
 // let arr = [5, 8, 1, 4, 2];
-// let target = 2;
+// let target = 11;
 // let index = 0;
 
 // for (let i = 1; i < arr.length; i++) {
 //     if (arr[i] == target) {
 //         index = i;
+//     } else {
+//         index = -1;
 //     }
 // }
-// console.log("index = ", index);
+// console.log("index = ", index);  
 
 
 
@@ -1172,17 +1174,102 @@
 
 // 64- Bubble Sort.
 
+// let arr = [5, 8, 1, 4, 7];
+
+// function findBubbleSort(arr) {
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         for (let j = 0; j < arr.length - 1 - i; j++) {
+//             if (arr[j] > arr[j + 1]) {
+//                 let temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// let sortedArray = findBubbleSort(arr);
+// console.log(sortedArray);
+
 
 
 // *******************************************************************************************************************
 
-// 65- Move all the negative elements on left side and positive elements on
-// right side O(n).
+
+// 65- Move all the negative elements on left side and positive elements on right side O(n).
+ 
+// let arr = [5, -8, 1, -4, -7];
+
+// let left = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < 0) {
+//         let temp = arr[i];
+//         arr[i] = arr[left];
+//         arr[left] = temp;
+//         left++;
+//     }
+// }
+// console.log(arr);
+
+
+
+// *******************************************************************************************************************
+
+
 // 66- Print the count of subarrays whose sum is equal to the target.
-// Ex - {1,2,3,7,5}, T = 12    O/P - 2 - [ {2,3,7}, {7,5} ] - Both the subarrays
-// has sum 12
+// Ex - [1,2,3,7,5], T = 12    O/P - 2 - [ {2,3,7}, {7,5} ] - Both the subarrays has sum 12
+
+// let arr = [1,2,3,7,5];
+// let target = 12;
+// let count = 0;
+// let result = [];
+
+// for (let start = 0; start < arr.length; start++) {
+//     let sum = 0;
+//     for (let end = start; end < arr.length; end++) {
+//        sum += arr[end];
+//        if(target === sum){
+//             count++;
+//             result.push(arr.slice(start, end+1));
+//        }
+//     }
+// }
+// console.log(count , "&" , result);  
+
+
+// *******************************************************************************************************************
+
+
 // 67- Strong number using methods
+// let num = 145 ;
+// let digits = num.toString().split('');
+// let sumOfFact = 0;
+// digits.forEach((element)=>{
+//     let fact = 1;
+//     for (let i = 1; i <= element; i++) {
+//        fact = fact * i;
+//     }
+//     sumOfFact += fact;
+//     // console.log(fact)
+// });
+// // console.log(sumOfFact)
+// if (sumOfFact === num ) {
+//     console.log(`${num} is strong number`);
+// } else {
+//     console.log(`${num} is not strong number`);
+// }
+
+
+// *******************************************************************************************************************
+
+
 // 68- Special number using methods.
+
+
+
+// *******************************************************************************************************************
+
+
 // 69- Leetcode 1929 - Concatenation of array
 // 70- Leetcode 1920 - Build Array from Permutation
 

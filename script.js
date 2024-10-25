@@ -1197,7 +1197,7 @@
 
 
 // 65- Move all the negative elements on left side and positive elements on right side O(n).
- 
+
 // let arr = [5, -8, 1, -4, -7];
 
 // let left = 0;
@@ -1264,14 +1264,195 @@
 
 
 // 68- Special number using methods.
-
+// Spacial are like as strong number
 
 
 // *******************************************************************************************************************
 
 
 // 69- Leetcode 1929 - Concatenation of array
+// let arr1 = [1, 2, 3];
+// let arr2 = [7,8,9];
+// let res = [...arr1, ...arr2];
+// console.log(res);
+
+
+// *******************************************************************************************************************
+
+
 // 70- Leetcode 1920 - Build Array from Permutation
+
+
+
+
+
+// ******************************************** STRING Day 33 to 37 ***********************************************************
+
+
+// 71- Accept a string from user and print its each character on a new line
+// let str = prompt("Enter a string");
+// for (let i = 0; i < str.length; i++) {
+//     console.log(str[i]);
+// }
+
+
+// *******************************************************************************************************************
+
+
+// 72- Accept a string and print it in reverse order
+
+// method 1
+// let str = prompt("Enter a string");
+// let reverseStr = str.split('').reverse().join('');
+// console.log(reverseStr);
+
+// method 2
+// let str = prompt("Enter a string");
+// let reverse = "";
+// for (let i = str.length - 1; i >= 0; i--) {
+//      // console.log(str[i]);
+//    reverse += str[i];
+// }
+// console.log(reverse);
+
+
+// *******************************************************************************************************************
+
+
+// 73- Check if the string is Pallindromic or not
+
+// let str = "nitin";
+// let reverseStr = "";
+// for (let i = str.length - 1; i >= 0 ; i--) {
+//    reverseStr += str[i];
+// }
+
+// if (reverseStr == str) {
+//    console.log(`${str} is Pallindromic`);
+// } else {
+//    console.log(`${str} is not Pallindromic`);
+// }
+
+
+// *******************************************************************************************************************
+
+
+// 74- Pallindromic String using method and Two pointer algorithm (hint: Array reverse algo)
+//  let str = "nitin";
+//  let reverseStr = str.split('').reverse().join('');
+//  str == reverseStr ? console.log("Pallindromic") : console.log("Not Pallindromic");
+
+
+// *******************************************************************************************************************
+
+
+// 75- Count vowels and consonents in a string
+// let str = "sitag";
+// let vowel = "aeiouAEIOU";
+// let vowelCount = 0;
+// let consonentCount = 0;
+// for (let i = 0; i < str.length; i++) {
+//    if (vowel.includes(str[i])) {
+//       vowelCount++;
+//    } else if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90 || str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
+//       consonentCount++;
+//    }
+// }
+// console.log(`Vowel = ${vowelCount} and Consonent = ${consonentCount}`);
+
+
+// *******************************************************************************************************************
+
+
+// 76- Toggle each alphabet of String In - AcgDfD Output - aCGdFd
+// let str = "Sita";
+// let toggledStr = "";
+
+// for (let i = 0; i < str.length; i++) {
+//    let char = str[i];
+//    if (char == char.toLowerCase()) {
+//       toggledStr += char.toUpperCase();
+//    } else {
+//       toggledStr += char.toLowerCase();
+//    }
+// }
+// console.log(toggledStr);
+
+
+
+// *******************************************************************************************************************
+
+
+// 77- Take an array of strings words and a String Prefix. Print the number of strings in words that contain pref as a prefix.
+//     Example - Input: words = ["pay","attention","practice","attend"], pref = "at", Output: 2
+
+// let words = ["pay","attention","practice","attend"];
+// let pref = "at";
+// prefWordCount = 0;
+// for (let i = 0; i < words.length; i++) {
+//    if(words[i].startsWith(pref)){
+//       prefWordCount++;
+//    }
+// }
+// console.log(prefWordCount);
+
+
+// *******************************************************************************************************************
+
+
+// 78- Accept a space seperated sentence and split in into words. Print each word on a new line with first letter capitalized.
+//             IN-          Hello bhai kaise ho
+//             OP-          Hello
+//                          Bhai
+//                          Kaise
+//                          Ho
+
+
+// let str = "Hello bhai kaise ho";
+// let words = str.split(' ');
+// for (let i = 0; i < words.length; i++) {
+//   words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+//   console.log(words[i]);
+// }
+
+// forEach method 
+// let str = "Hello bhai kaise ho";
+// let words = str.split(' ');
+// words.forEach(word => {
+//   let capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+//   console.log(capitalizedWord);
+// });
+
+
+
+// *******************************************************************************************************************
+
+
+// 79- Extend the prev question and capitalize first & last character of each word in the sentence and print the new sentence
+//    Ex - Hello bhai Kaise ho a,   Output : HellO BhaI KaisE HO A
+
+// let str = "Hello bhai Kaise ho a";
+// let wordStr = str.split(' ');
+
+// let res = wordStr.map((word) => {
+//   if (word.length > 1) {
+//     return word.charAt(0).toUpperCase() + word.slice(1, word.length - 1) + word.charAt(word.length - 1).toUpperCase();
+//   } else {
+//     return word.toUpperCase();
+//   }
+// }).join(' '); 
+
+// console.log(res);
+
+
+
+// 80- 2114. Maximum Number of Words Found in Sentences
+// 81- Accept a string and print the frequency of each character present in
+// the string
+// 82- Check Two Strings are Anagram or Not , Anagrams words have the same word length & same character count
+//    Examples of anagram words are arc and car, state and taste, night and thing etc.
+// 83- Sort the words of the sentence
+
 
 
 
